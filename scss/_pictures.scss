@@ -1,0 +1,24 @@
+.pictures {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  @include breakpoint-up(medium) {
+    grid-template-columns: 1fr 1fr;
+  }
+  &__1 {
+    background: url(/images/mobile/image-graphic-design.jpg) center/cover
+      no-repeat;
+
+      color: $darkCyan;
+      @include breakpoint-up(large){
+          background-image: url(/images/desktop/image-graphic-design.jpg);
+      }
+  }
+  &__2 {
+    background: url(/images/mobile/image-photography.jpg) center/cover no-repeat;
+    color: $darkBlue;
+     @include breakpoint-up(large){
+          background-image: url(/images/desktop/image-photography.jpg);
+      }
+  }
+}

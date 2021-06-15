@@ -1,0 +1,93 @@
+header{
+  min-height: 100vh;
+    background: url(/images/mobile/image-header.jpg) center/cover no-repeat;
+@include breakpoint-up(medium){
+    background-image: url(/images/desktop/image-header.jpg);
+}
+  
+.arrow{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 17rem;
+  @include breakpoint-down(small){
+    top: 22rem;
+  }
+}
+
+.nav {
+  font-size: 0.875rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.25rem 1rem 2.25rem;
+ 
+  @include breakpoint-down(small) {
+    padding: 2.25rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  &__toggle {
+    cursor: pointer;
+    span {
+      display: block;
+      width: 1.625rem;
+      height: 0.1875rem;
+      background: $white;
+    //   transition: all 400ms ease-in-out;
+      &:not(:last-child) {
+        margin-bottom: 0.3125rem;
+      }
+    }
+  }
+  &__menu{
+      z-index: 2;
+      height: 20rem;
+      position: absolute;
+     
+      background: $white;
+    top: 6.5rem;
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.125rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      a{
+          color: $darkGrayishBlue;
+          margin-bottom: 2.625rem ;
+      }
+      button{
+          background: $yellow;
+          color: $veryDarkBlue;
+      }
+      .triangle {
+    position: relative;
+  height: 0;
+  width: 0;
+  align-self: flex-end;
+  top: -2.25rem;
+  border-left: 25px solid transparent;
+  border-right:25px solid white;
+  border-bottom: 25px solid transparent;
+  border-top: 25px solid transparent;
+}
+      
+  }
+
+  &__links {
+    a {
+      margin-right: 3rem;
+      color: $white;
+     
+    }
+  }
+}
+}
+.has-fade{
+    
+        visibility: hidden;
+      }
+

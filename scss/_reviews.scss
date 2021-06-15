@@ -1,0 +1,53 @@
+.reviews{
+    text-align: center;
+    margin-bottom: 5rem;
+ @include breakpoint-up(medium){
+     margin: 10rem 0;
+ }
+    h3{
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: $grayishBlue;  
+    margin: 4rem 0 0 0; 
+    letter-spacing: 2px;
+  @include breakpoint-up(medium){
+      font-size: 1.1rem;
+  } 
+} 
+&__flex{
+    @include breakpoint-up(medium){
+    width: 88%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+}
+&__review{
+    margin-top: 4rem;
+    img{
+        width: 72px;
+        border-radius: 50%;
+    }
+    p{
+        width: 80%;
+        margin: 2.5rem auto;
+        color : $veryDarkGrayishBlue;
+        line-height: 1.5;
+        font-size: 1.1rem;
+    
+    }
+    .name{
+        color: $veryDarkBlue;
+        font-family:  'Fraunces', serif;
+        margin-bottom: 1.25rem;
+        @include breakpoint-up(medium){
+            margin-bottom: 0.75rem;
+        }
+    }
+    .position{
+        font-size: 0.85rem;
+        color: $grayishBlue;
+    }
+}
+}

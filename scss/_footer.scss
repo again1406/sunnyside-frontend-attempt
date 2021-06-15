@@ -1,0 +1,43 @@
+.footer{
+    text-align: center;
+   
+        padding: 5rem 15%;
+        @include breakpoint-up(medium){
+            padding: 5rem 35%;
+        }
+    @include breakpoint-up(large){
+        padding: 5rem 40%;
+
+    }
+    background: $ModCyan;
+    img{
+        width: 10.625rem;
+        margin-bottom: 3.375rem;
+    }
+    &__links{
+        margin-bottom: 5.625rem;
+        display: flex;
+        justify-content: space-between;
+        a{
+            color: $darkCyan;
+            transition: color 300ms ease-in-out;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+    &__social{
+        display: flex;
+        padding: 0 18%;
+        justify-content: space-between;
+        svg{
+         cursor: pointer;
+         &:hover{
+             path {
+                 transition: fill 300ms ease-in-out;
+                 fill: $white;
+             }
+         }
+        }
+    }
+}
